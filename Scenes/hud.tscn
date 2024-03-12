@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxho6ul1cqwd7"]
+
+[ext_resource type="LabelSettings" uid="uid://dg7hq1aaqhrp8" path="res://Scenes/white-32.tres" id="1_6ewqu"]
+[ext_resource type="Script" path="res://Scenes/hud.gd" id="1_k2lam"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k2lam")
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+
+[node name="LevelBox" type="HBoxContainer" parent="MC/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MC/VBoxContainer/LevelBox"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Level"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="LevelLabel" type="Label" parent="MC/VBoxContainer/LevelBox"]
+custom_minimum_size = Vector2(120, 2.08165e-12)
+layout_mode = 2
+text = "99
+"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="MovesBox" type="HBoxContainer" parent="MC/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MC/VBoxContainer/MovesBox"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Moves
+"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="MovesLabel" type="Label" parent="MC/VBoxContainer/MovesBox"]
+custom_minimum_size = Vector2(120, 2.08165e-12)
+layout_mode = 2
+text = "0
+"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="BestBox" type="HBoxContainer" parent="MC/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MC/VBoxContainer/BestBox"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "Best"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="BestLabel" type="Label" parent="MC/VBoxContainer/BestBox"]
+custom_minimum_size = Vector2(120, 2.08165e-12)
+layout_mode = 2
+text = "
+"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Label" type="Label" parent="MC/VBoxContainer2"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
+layout_mode = 2
+text = "(Q)uit Level
+(R)estart Level"
+label_settings = ExtResource("1_6ewqu")
+vertical_alignment = 1

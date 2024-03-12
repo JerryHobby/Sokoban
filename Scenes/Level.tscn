@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5d3q6m8buxb3"]
+[gd_scene load_steps=10 format=3 uid="uid://c5d3q6m8buxb3"]
 
 [ext_resource type="Script" path="res://Scenes/Level.gd" id="1_le4ct"]
 [ext_resource type="Texture2D" uid="uid://g3lp5endnk3d" path="res://assets/spritesheet.png" id="1_m5sjo"]
 [ext_resource type="Texture2D" uid="uid://b365d7py7kme7" path="res://assets/Terrain (32x32).png" id="2_3ygrq"]
 [ext_resource type="PackedScene" uid="uid://bs32qyxjq3odm" path="res://Scenes/Player.tscn" id="3_nbhpp"]
+[ext_resource type="PackedScene" uid="uid://dxho6ul1cqwd7" path="res://Scenes/hud.tscn" id="5_wnany"]
+[ext_resource type="PackedScene" uid="uid://cttfxjcmk1v5i" path="res://Scenes/game_over_ui.tscn" id="6_ehqli"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ofdhj"]
 resource_name = "level_tiles"
@@ -281,3 +283,10 @@ position = Vector2(48, 114)
 position = Vector2(272, 150)
 scale = Vector2(1.2, 1.2)
 zoom = Vector2(1.2, 1.2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameOverUi" parent="CanvasLayer" instance=ExtResource("6_ehqli")]
+visible = false
+
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_wnany")]

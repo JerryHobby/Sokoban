@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyohbxon3ij0w"]
+
+[ext_resource type="Script" path="res://Scenes/main.gd" id="1_6tlh0"]
+[ext_resource type="Texture2D" uid="uid://ddn8ftd75a7v" path="res://assets/Gray.png" id="1_051v7"]
+[ext_resource type="LabelSettings" uid="uid://biiturkdf67qj" path="res://Scenes/title.tres" id="3_crbad"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_6tlh0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_051v7")
+stretch_mode = 1
+
+[node name="MC" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 60
+
+[node name="VB" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="MC/VB"]
+layout_mode = 2
+text = "Sokoban (ish)"
+label_settings = ExtResource("3_crbad")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spacer" type="TextureRect" parent="MC/VB"]
+custom_minimum_size = Vector2(2.08165e-12, 40)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MC/VB"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
